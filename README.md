@@ -5,7 +5,6 @@
 
 A graduating product of the course 'Code Intensive - MindX' 
 
-Summary: https://bit.ly/3sFRI2S
 
 Author: Phuong Ha, Hoang Long, Hoang Vu, Quang Minh
 
