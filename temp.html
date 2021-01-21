@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap" rel="stylesheet">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        button {
+            font-family: 'JetBrains Mono', monospace;
+        }
+        .container{
+            background-color: #010101;
+            width: 100vw;
+            height: 100vh;
+        }
+        .record-container{
+            position: fixed;
+            transform: translateX(50%);
+            width: 50%;
+            background-color:#252525;
+            border-radius: 20px;
+            padding: 40px;
+            box-sizing: border-box;
+            font-family: 'JetBrains Mono', monospace;
+            color: #fff;
+            font-size: 20px;
+            transition: all 1s;
+        }
+        .name-input, .description-input{
+            display: flex;
+            flex-direction: column;
+            justify-content: left;
+            margin-bottom: 30px;
+        }
+        .name-input textarea, .description-input textarea{   
+            color: #fff;
+            width: 100%;
+            height: 50px;
+            line-height: 50px;
+            padding: 0 15px;
+            box-sizing: border-box;
+            font-size: 20px;
+            background-color: transparent;
+            border: 2px solid #fff;
+            border-radius: 10px;
+            outline: none;
+        }
+        .description-input textarea{
+            height: 300px;
+            line-height: 50px;
+        }
+        .btn-row{
+            display: flex;
+            justify-content: flex-end;
+        }
+        #confirm-btn, #cancel-btn{
+            width: fit-content;
+            padding: 10px;
+            background-color: #fff;
+            color: #000;
+            border-radius: 10px;
+            margin-left: 15px;
+        }
+        #confirm-btn:hover, #cancel-btn:hover{
+            box-shadow: 4px 4px 0 #69C9D0,-4px -4px 0 #EE1D52;
+            cursor: pointer;
+        }
+
+        /* create-btn*/
+
+        #create-btn{
+        position: fixed;
+        color: #fff;
+        font-size: 60px;
+        left: 90vw;
+        top: 80vh;
+        }
+        #create-btn:hover{
+            cursor: pointer;
+            text-shadow: 4px 4px 0 #69C9D0,-4px -4px 0 #EE1D52;
+        }
+        @media only screen and (max-width: 786px){
+            #create-btn{
+                font-size: 50px;
+                left: 80vw;
+            }
+        }
+        /*Function*/
+
+
+
+    </style>
+</head>
+<body>
+    <main>
+        <div class="container">
+            <div class="record-container">       
+                    <div class="name-input">
+                        <div>Enter your Quiz's name</div>
+                        <textarea placeholder="Sample Quiz"></textarea>
+                    </div>
+                    
+                    <div class="description-input">
+                        <div>Enter your Quiz's description</div>
+                        <textarea placeholder="This quiz is about..."></textarea>
+                    </div>
+                    <div class="btn-row">
+                        <button id='confirm-btn'>Confirm</button>
+                        <button id='cancel-btn'>Cancel</button>
+                    </div>     
+            </div>
+        </div>
+    </main>
+        <button>
+            <div id="create-btn"><i class="fa fa-plus-circle"></i></div>
+        </button>
+
+</body>
+</html>
